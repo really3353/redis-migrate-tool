@@ -103,7 +103,7 @@ static int read_thread_data_init(thread_data *rdata)
 
     thread_data_init(rdata);
 
-    rdata->loop = aeCreateEventLoop(1000);
+    rdata->loop = aeCreateEventLoop(5000);
     if (rdata->loop == NULL) {
     	log_error("ERROR: create event loop failed");
         goto error;
@@ -150,7 +150,7 @@ static int write_thread_data_init(rmtContext *ctx, thread_data *wdata)
 
     wdata->ctx = ctx;
 
-	wdata->loop = aeCreateEventLoop(1000);
+	wdata->loop = aeCreateEventLoop(5000);
     if (wdata->loop == NULL) {
     	log_error("ERROR:  create event loop failed");
         goto error;

@@ -199,7 +199,7 @@ init_context(struct instance *rmti)
         rmt_ctx->dir = sdsdup(cf->dir);
     }
 
-    rmt_ctx->loop = aeCreateEventLoop(1000);
+    rmt_ctx->loop = aeCreateEventLoop(5000);
     if (rmt_ctx->loop == NULL) {
     	log_error("ERROR: create event loop failed");
         destroy_context(rmt_ctx);

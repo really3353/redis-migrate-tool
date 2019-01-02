@@ -7981,7 +7981,7 @@ uint32_t
 redis_twem_backend_idx(redis_group *rgroup, uint8_t *key, uint32_t keylen)
 {
     uint32_t idx, hash;
-    int distribution = DIST_KETAMA;
+    int distribution = DIST_MODULA;
     struct continuum *continuum;
     
     RMT_NOTUSED(rgroup);
@@ -8015,7 +8015,7 @@ redis_node *
 redis_twem_backend_node(redis_group *rgroup, uint8_t *key, uint32_t keylen)
 {
     uint32_t idx, hash;
-    int distribution = DIST_KETAMA;
+    int distribution = DIST_MODULA;
     struct continuum *continuum;
     
     RMT_NOTUSED(rgroup);
